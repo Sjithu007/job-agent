@@ -1,28 +1,17 @@
-from search.aggregator import JobAggregator
+from ai import ask_ai
+
 
 def main():
 
-    print("=" * 50)
-    print("AI Job Agent")
-    print("=" * 50)
+    print("=" * 40)
+    print("CareerPilot AI")
+    print("=" * 40)
 
-    aggregator = JobAggregator()
+    print("\nTesting AI...\n")
 
-    jobs = aggregator.fetch_all_jobs()
+    answer = ask_ai("Introduce yourself in one sentence.")
 
-    for job in jobs:
-
-        print()
-
-        print("-" * 40)
-        print(f"Company : {job.company}")
-        print(f"Role    : {job.title}")
-        print(f"Location: {job.location}")
-        print(f"URL     : {job.url}")
-
-    print()
-
-    print(f"Total jobs found: {len(jobs)}")
+    print(answer)
 
 
 if __name__ == "__main__":
